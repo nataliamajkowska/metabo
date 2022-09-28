@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetaboCoins.Views.Base.Templates.MainInformation"
+             xmlns:resx="clr-namespace:MetaboCoins.Resx"
+             xmlns:converter="clr-namespace:MetaboCoins.ViewModels.Base">
+  <ContentView.Content>
+      <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <!-- Threshold Label-->
+            <Label 
+                    Grid.Row="0"
+                    Padding="0,0,0,10"
+                    Text="{x:Static resx:AppResources.StringTurnoveInAKU}"
+                    FontSize="18"
+                    TextColor="{DynamicResource BaseTextColor}"
+                    Style="{StaticResource LabelBoldStyle}"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"/>
+            <!-- Threshold Data-->
+            <Frame
+                    Grid.Row="1"
+                    Padding="0"
+                    BorderColor="{DynamicResource FullTransparentBackgroundColor}"
+                    BackgroundColor="{DynamicResource ShadowBackgoundColor}"
+                    IsClippedToBounds="True"
+                    CornerRadius="20"
+                    HeightRequest="80"
+                    HorizontalOptions="FillAndExpand">
+                <Grid
+                        Padding="15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Frame
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Padding="0"
+                            BorderColor="{DynamicResource FullTransparentBackgroundColor}"
+                            BackgroundColor="{DynamicResource DarkShadowBackgoundColor}"
+                            IsClippedToBounds="True"
+                            CornerRadius="10"
+                            HeightRequest="50"
+                            WidthRequest="50">
+                        <Image
+                                HeightRequest="23"
+                                WidthRequest="23"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                Source="finance.png"/>
+                    </Frame>
+                    <StackLayout
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Padding="13,0,0,0">
+                        <Label
+                                Text="{x:Static resx:AppResources.StringTurnoverThresholdToBeReached}"
+                                FontSize="14"
+                                TextColor="{DynamicResource BaseTextColor}"
+                                Style="{StaticResource LabelBoldStyle}"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start"/>
+                        <Label
+                                Text="{Binding TurnoverThreshold, StringFormat='{0} zł'}"
+                                FontSize="18"
+                                TextColor="{DynamicResource DarkShadowTextColor}"
+                                Style="{StaticResource LabelBoldStyle}"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start"/>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+            <!-- Your Turnover Data Done -->
+            <Frame
+                    Margin="0,5,0,0"
+                    Grid.Row="2"
+                    Padding="0"
+                    BorderColor="{DynamicResource FullTransparentBackgroundColor}"
+                    BackgroundColor="{DynamicResource GreenBackgroundColor}"
+                    IsClippedToBounds="True"
+                    CornerRadius="20"
+                    HeightRequest="80"
+                    HorizontalOptions="FillAndExpand"
+                    IsVisible="{Binding TurnoverIsDone}">
+                <Grid
+                        Padding="15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Frame
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Padding="0"
+                            BorderColor="{DynamicResource FullTransparentBackgroundColor}"
+                            BackgroundColor="{DynamicResource LittleTransparentBackgroundColor}"
+                            IsClippedToBounds="True"
+                            CornerRadius="10"
+                            HeightRequest="50"
+                            WidthRequest="50">
+                        <Image
+                                HeightRequest="16"
+                                WidthRequest="19"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                Source="check.png"/>
+                    </Frame>
+                    <StackLayout
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Padding="13,0,0,0">
+                        <Label
+                                Text="{x:Static resx:AppResources.StringYourTurnover}"
+                                FontSize="14"
+                                TextColor="{DynamicResource WhiteTextColor}"
+                                Style="{StaticResource LabelBoldStyle}"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start"/>
+                        <Label
+                                Text="{Binding Turnover, StringFormat='{0} zł'}"
+                                FontSize="18"
+                                TextColor="{DynamicResource WhiteTextColor}"
+                                Style="{StaticResource LabelBoldStyle}"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start"/>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+            <!-- Your Turnover Data not made-->
+            <Frame
+                    Margin="0,5,0,0"
+                    Grid.Row="2"
+                    Padding="0"
+                    BorderColor="{DynamicResource FullTransparentBackgroundColor}"
+                    BackgroundColor="{DynamicResource RedBackgroundColor}"
+                    IsClippedToBounds="True"
+                    CornerRadius="20"
+                    HeightRequest="80"
+                    HorizontalOptions="FillAndExpand"
+                    IsVisible="{Binding TurnoverIsDone, Converter={converter:BooleanConverter}}">
+                <Grid
+                        Padding="15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Frame
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Padding="0"
+                            BorderColor="{DynamicResource FullTransparentBackgroundColor}"
+                            BackgroundColor="{DynamicResource LittleTransparentBackgroundColor}"
+                            IsClippedToBounds="True"
+                            CornerRadius="10"
+                            HeightRequest="50"
+                            WidthRequest="50">
+                        <Image
+                                HeightRequest="15"
+                                WidthRequest="15"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                Source="close.png"/>
+                    </Frame>
+                    <StackLayout
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Padding="13,0,0,0">
+                        <Label
+                                Text="{x:Static resx:AppResources.StringYourTurnover}"
+                                FontSize="14"
+                                TextColor="{DynamicResource WhiteTextColor}"
+                                Style="{StaticResource LabelBoldStyle}"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start"/>
+                        <Label
+                                Text="{Binding Turnover, StringFormat='{0} zł'}"
+                                FontSize="18"
+                                TextColor="{DynamicResource WhiteTextColor}"
+                                Style="{StaticResource LabelBoldStyle}"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start"/>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+            <!-- Threshold Label-->
+            <Label 
+                    Grid.Row="3"
+                    Padding="0,30,0,0"
+                    Text="{x:Static resx:AppResources.StringYourMetaboCoins}"
+                    FontSize="18"
+                    TextColor="{DynamicResource BaseTextColor}"
+                    Style="{StaticResource LabelBoldStyle}"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"/>
+            <!-- Achieve a Turnover-->
+            <Grid
+                    Grid.Row="4"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    IsVisible="{Binding TurnoverIsDone, Converter={converter:BooleanConverter}}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="21"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image
+                        Grid.Column="0"
+                        HeightRequest="21"
+                        WidthRequest="21"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Source="infoAlert.png"/>
+                <Label 
+                        Grid.Column="1"
+                        Text="{x:Static resx:AppResources.StringAchieveTurnover}"
+                        FontSize="13"
+                        TextColor="{DynamicResource ShadowTextColor}"
+                        Style="{StaticResource LabelBoldStyle}"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"/>
+            </Grid>
+            <!-- metaboCoins to use -->
+            <Frame
+                    Grid.Row="5"
+                    Margin="0,10,0,0"
+                    Padding="0"
+                    BorderColor="{DynamicResource FullTransparentBackgroundColor}"
+                    BackgroundColor="{DynamicResource ShadowBackgoundColor}"
+                    IsClippedToBounds="True"
+                    CornerRadius="20"
+                    HeightRequest="80"
+                    HorizontalOptions="FillAndExpand">
+                <Grid
+                        Padding="15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Frame
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Padding="0"
+                            BorderColor="{DynamicResource FullTransparentBackgroundColor}"
+                            BackgroundColor="{DynamicResource DarkShadowBackgoundColor}"
+                            IsClippedToBounds="True"
+                            CornerRadius="10"
+                            HeightRequest="50"
+                            WidthRequest="50">
+                        <Image
+                                HeightRequest="23"
+                                WidthRequest="23"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                Source="bitcoin.png"/>
+                    </Frame>
+                    <StackLayout
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Padding="13,0,0,0">
+                        <Label
+                                Text="{x:Static resx:AppResources.StringMetaboCoinsToUse}"
+                                FontSize="14"
+                                TextColor="{DynamicResource BaseTextColor}"
+                                Style="{StaticResource LabelBoldStyle}"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start"/>
+                        <Label
+                                Text="{Binding MetaboCoins, StringFormat='{0} mC'}"
+                                FontSize="18"
+                                TextColor="{DynamicResource DarkShadowTextColor}"
+                                Style="{StaticResource LabelBoldStyle}"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start"/>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+            <!-- Metabo Coins For Settlement and Metabo Coins Cleared-->
+            <Grid
+                    Grid.Row="7"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
+                    ColumnSpacing="15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!-- Metabo Coins For Settlement -->
+                <Frame
+                        Grid.Column="0"
+                        Padding="0"
+                        BorderColor="{DynamicResource FullTransparentBackgroundColor}"
+                        BackgroundColor="{DynamicResource ShadowBackgoundColor}"
+                        IsClippedToBounds="True"
+                        CornerRadius="20"
+                        HeightRequest="80"
+                        HorizontalOptions="FillAndExpand">
+                    <Grid
+                            Padding="15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout
+                                Grid.Row="0"
+                                Padding="13,0,0,0"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center">
+                            <Label
+                                    Text="{Binding MetaboCoinsForSettlement, StringFormat='{0} mC'}"
+                                    FontSize="18"
+                                    TextColor="{DynamicResource DarkShadowTextColor}"
+                                    Style="{StaticResource LabelBoldStyle}"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"/>
+                            <Label
+                                    Text="{x:Static resx:AppResources.StringForSettlement}"
+                                    FontSize="14"
+                                    TextColor="{DynamicResource BaseTextColor}"
+                                    Style="{StaticResource LabelBoldStyle}"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <!-- Metabo Coins Cleared -->
+                <Frame
+                        Grid.Column="1"
+                        Padding="0"
+                        BorderColor="{DynamicResource FullTransparentBackgroundColor}"
+                        BackgroundColor="{DynamicResource ShadowBackgoundColor}"
+                        IsClippedToBounds="True"
+                        CornerRadius="20"
+                        HeightRequest="80"
+                        HorizontalOptions="FillAndExpand">
+                    <Grid
+                            Padding="15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout
+                                Grid.Row="0"
+                                Padding="13,0,0,0"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center">
+                            <Label
+                                    Text="{Binding MetaboCoinsCleared, StringFormat='{0} mC'}"
+                                    FontSize="18"
+                                    TextColor="{DynamicResource DarkShadowTextColor}"
+                                    Style="{StaticResource LabelBoldStyle}"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"/>
+                            <Label
+                                    Text="{x:Static resx:AppResources.StringCleared}"
+                                    FontSize="14"
+                                    TextColor="{DynamicResource BaseTextColor}"
+                                    Style="{StaticResource LabelBoldStyle}"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+            </Grid>
+        </Grid>
+  </ContentView.Content>
+</ContentView>

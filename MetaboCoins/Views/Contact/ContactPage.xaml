@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetaboCoins.Views.Contact.ContactPage"
+             xmlns:baseTemplates="clr-namespace:MetaboCoins.Views.Base.Templates"
+             xmlns:resx="clr-namespace:MetaboCoins.Resx"
+             NavigationPage.HasNavigationBar="False">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ScrollView
+            Grid.Row="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <!-- Background-->
+                <Grid
+                    Grid.Row="0"
+                    BackgroundColor="{DynamicResource DarkShadowBackgoundColor}">
+                    <Frame
+                        Grid.Row="0"
+                        Margin="0,280,0,-20"
+                        Padding="0"
+                        BorderColor="{DynamicResource FullTransparentBackgroundColor}"
+                        BackgroundColor="{DynamicResource DirtyWhiteBackgroundColor}"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"/>
+                </Grid>
+                <Grid
+                    Grid.Row="0"
+                    Padding="30,0,30,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <!-- Contact Label-->
+                    <Label 
+                        Grid.Row="0"
+                        Padding="0,20,0,140"
+                        Text="{x:Static resx:AppResources.StringContact}"
+                        FontSize="24"
+                        TextColor="{DynamicResource WhiteTextColor}"
+                        Style="{StaticResource LabelBoldStyle}"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Start"/>
+                    <!-- Contact Information -->
+                    <Frame
+                        Grid.Row="1"
+                        Margin="0,0,0,30"
+                        Padding="0"
+                        BorderColor="{DynamicResource FullTransparentBackgroundColor}"
+                        BackgroundColor="{DynamicResource WhiteBackgroundColor}"
+                        IsClippedToBounds="True"
+                        CornerRadius="20"
+                        HeightRequest="200"
+                        HorizontalOptions="FillAndExpand">
+                        <Grid
+                            Padding="20"
+                            RowSpacing="20">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="40"/>
+                            </Grid.RowDefinitions>
+                            <!-- Contact Name-->
+                            <Label
+                                Grid.Row="0"
+                                Margin="0,5,0,0"
+                                Grid.ColumnSpan="2"
+                                Text="{Binding ContactName}"
+                                FontSize="18"
+                                TextColor="{DynamicResource BaseTextColor}"
+                                Style="{StaticResource LabelBoldStyle}"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start"/>
+                            <!-- Phone Number-->
+                            <Frame
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Padding="0"
+                                BorderColor="{DynamicResource FullTransparentBackgroundColor}"
+                                BackgroundColor="{DynamicResource ShadowBackgoundColor}"
+                                IsClippedToBounds="True"
+                                CornerRadius="10"
+                                HeightRequest="40"
+                                WidthRequest="40">
+                                <Image
+                                    HeightRequest="18"
+                                    WidthRequest="18"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    Source="phone.png"/>
+                            </Frame>
+                            <StackLayout
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                Padding="13,0,0,0">
+                                <Label
+                                    Text="{x:Static resx:AppResources.StringPhoneNumber}"
+                                    FontSize="14"
+                                    TextColor="{DynamicResource BaseTextColor}"
+                                    Style="{StaticResource LabelBoldStyle}"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="Start"/>
+                                <Label
+                                    Text="{Binding ContactPhone, StringFormat='+48 {0}'}"
+                                    FontSize="14"
+                                    TextColor="{DynamicResource DarkShadowTextColor}"
+                                    Style="{StaticResource LabelBoldStyle}"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="Start"/>
+                            </StackLayout>
+                            <!-- Email-->
+                            <Frame
+                                Grid.Row="2"
+                                Grid.Column="0"
+                                Padding="0"
+                                BorderColor="{DynamicResource FullTransparentBackgroundColor}"
+                                BackgroundColor="{DynamicResource ShadowBackgoundColor}"
+                                IsClippedToBounds="True"
+                                CornerRadius="10"
+                                HeightRequest="40"
+                                WidthRequest="40">
+                                <Image
+                                    HeightRequest="20"
+                                    WidthRequest="20"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    Source="email.png"/>
+                            </Frame>
+                            <StackLayout
+                                Grid.Row="2"
+                                Grid.Column="1"
+                                Padding="13,0,0,0">
+                                <Label
+                                    Text="{x:Static resx:AppResources.StringEmailAdress}"
+                                    FontSize="14"
+                                    TextColor="{DynamicResource BaseTextColor}"
+                                    Style="{StaticResource LabelBoldStyle}"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="Start"/>
+                                <Label
+                                    Text="{Binding ContactEmail}"
+                                    FontSize="14"
+                                    TextColor="{DynamicResource DarkShadowTextColor}"
+                                    Style="{StaticResource LabelBoldStyle}"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="Start"/>
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
+                    <!-- Need Support Label-->
+                    <Label 
+                        Grid.Row="2"
+                        Padding="0,0,0,10"
+                        Text="{x:Static resx:AppResources.StringDoYouNeedSupport}"
+                        FontSize="18"
+                        TextColor="{DynamicResource BaseTextColor}"
+                        Style="{StaticResource LabelBoldStyle}"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"/>
+                    <!-- Welcome Label-->
+                    <Label 
+                        Grid.Row="3"
+                        Padding="0,0,0,10"
+                        Text="{x:Static resx:AppResources.StringContactUsMessage}"
+                        FontSize="14"
+                        TextColor="{DynamicResource ShadowTextColor}"
+                        Style="{StaticResource LabelBoldStyle}"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"/>
+                </Grid>
+            </Grid>
+        </ScrollView>
+        <!-- Bottom Navigation-->
+        <baseTemplates:BottomNavigationBar Grid.Row="1"/>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetaboCoins.Views.Scan.ScanPage"
+             xmlns:baseTemplates="clr-namespace:MetaboCoins.Views.Base.Templates"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             xmlns:resx="clr-namespace:MetaboCoins.Resx"
+             NavigationPage.HasNavigationBar="False">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid
+            Grid.Row="0">
+            <Grid>
+                <Grid.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="iOS" Value="30,40,30,0"/>
+                        <On Platform="Android" Value="30,0,30,0"/>
+                    </OnPlatform>
+                </Grid.Margin>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label 
+                    Grid.Row="0"
+                    Text="{x:Static resx:AppResources.StringScanTheProduct}"
+                    TextColor="{DynamicResource BaseTextColor}"
+                    Style="{StaticResource LabelBoldStyle}"
+                    FontSize="24"
+                    Padding="0,30,0,40"/>
+                <zxing:ZXingScannerView
+                    Grid.Row="1"
+                    x:Name="testView"
+                    IsScanning="True"
+                    OnScanResult="ZXingScannerView_OnScanResult"/>
+                <Frame
+                    Grid.Row="2"
+                    Margin="0,10,0,15"
+                    Padding="0"
+                    BorderColor="{DynamicResource FullTransparentBackgroundColor}"
+                    BackgroundColor="{DynamicResource DarkBackgroundColor}"
+                    IsClippedToBounds="True"
+                    CornerRadius="10"
+                    HeightRequest="60"
+                    HorizontalOptions="FillAndExpand">
+                    <Label
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="18"
+                        Text="{x:Static resx:AppResources.StringScan}"
+                        TextColor="{DynamicResource WhiteTextColor}"
+                        Style="{StaticResource LabelBoldStyle}"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ScanCommand}"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+        </Grid>
+        <!-- Bottom Navigation-->
+        <baseTemplates:BottomNavigationBar Grid.Row="1"/>
+    </Grid>
+</ContentPage>

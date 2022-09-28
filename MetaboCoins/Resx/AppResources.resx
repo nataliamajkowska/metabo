@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="StringAchieveTurnover" xml:space="preserve">
+    <value>Osiągnij obrót celem odblokowania metaboCoins</value>
+  </data>
+  <data name="StringCleared" xml:space="preserve">
+    <value>Rozliczone</value>
+  </data>
+  <data name="StringClose" xml:space="preserve">
+    <value>Zamknij</value>
+  </data>
+  <data name="StringCompanyName" xml:space="preserve">
+    <value>Nazwa firmy</value>
+  </data>
+  <data name="StringConnectionError" xml:space="preserve">
+    <value>Błąd połączenia</value>
+  </data>
+  <data name="StringContact" xml:space="preserve">
+    <value>Kontakt</value>
+  </data>
+  <data name="StringContactTheSupport" xml:space="preserve">
+    <value>Skontaktuj się z podaną osobą ze wsparcia</value>
+  </data>
+  <data name="StringContactUs" xml:space="preserve">
+    <value>Skontaktuj się z nami!</value>
+  </data>
+  <data name="StringContactUsMessage" xml:space="preserve">
+    <value>Skontaktuj się z nami. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla adipiscing eu, feugiat tellus dis. Lacus semper turpis lectus elementum. Non id convallis arcu sit nunc imperdiet vel tellus. Viverra elementum lobortis mi aliquam nunc ipsum volutpat natoque.</value>
+  </data>
+  <data name="StringDontYouRememberThePassword" xml:space="preserve">
+    <value>Nie pamiętasz hasła?</value>
+  </data>
+  <data name="StringDoYouNeedSupport" xml:space="preserve">
+    <value>Potrzebujesz wsparcia?</value>
+  </data>
+  <data name="StringDuplicate" xml:space="preserve">
+    <value>Duplikat</value>
+  </data>
+  <data name="StringEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="StringEmailAdress" xml:space="preserve">
+    <value>Adres email</value>
+  </data>
+  <data name="StringError" xml:space="preserve">
+    <value>Wystąpił błąd</value>
+  </data>
+  <data name="StringErrorWhileScanning" xml:space="preserve">
+    <value>Wystąpił błąd podczas skanowania produktu.
+Spróbuj ponownie później.</value>
+  </data>
+  <data name="StringForSettlement" xml:space="preserve">
+    <value>Do rozliczenia</value>
+  </data>
+  <data name="StringHistory" xml:space="preserve">
+    <value>Historia</value>
+  </data>
+  <data name="StringInternalError" xml:space="preserve">
+    <value>Wystąpił błąd po stronie serwera</value>
+  </data>
+  <data name="StringLogin" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="StringLoginError" xml:space="preserve">
+    <value>Błąd logowania</value>
+  </data>
+  <data name="StringLoginErrorMessage" xml:space="preserve">
+    <value>Spróbuj ponownie upewniając się że podałeś prawidłowe dane logowania i hasło. W razie konieczności skontaktuj się z nami telefonicznie lub mailowo.</value>
+  </data>
+  <data name="StringMetaboCoinsToUse" xml:space="preserve">
+    <value>metaboCoins do wykorzystania</value>
+  </data>
+  <data name="StringNoConnectionToTheServer" xml:space="preserve">
+    <value>Brak połączenia z serwerem</value>
+  </data>
+  <data name="StringNoData" xml:space="preserve">
+    <value>Brak danych</value>
+  </data>
+  <data name="StringPassword" xml:space="preserve">
+    <value>Hasło</value>
+  </data>
+  <data name="StringPhoneNumber" xml:space="preserve">
+    <value>Numer telefonu</value>
+  </data>
+  <data name="StringPointsAmount" xml:space="preserve">
+    <value>Liczba punktów</value>
+  </data>
+  <data name="StringProfile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="StringRemindPassword" xml:space="preserve">
+    <value>Przypomnij hasło.</value>
+  </data>
+  <data name="StringScan" xml:space="preserve">
+    <value>Skanuj</value>
+  </data>
+  <data name="StringScanFailureDuplicate" xml:space="preserve">
+    <value>Błąd skanowania - duplikat</value>
+  </data>
+  <data name="StringScanTheProduct" xml:space="preserve">
+    <value>Zeskanuj produkt</value>
+  </data>
+  <data name="StringSignIn" xml:space="preserve">
+    <value>Zaloguj się</value>
+  </data>
+  <data name="StringSNProduct" xml:space="preserve">
+    <value>S/N produktu</value>
+  </data>
+  <data name="StringState" xml:space="preserve">
+    <value>Stan</value>
+  </data>
+  <data name="StringSuccess" xml:space="preserve">
+    <value>Sukces</value>
+  </data>
+  <data name="StringTheProductHasBeenAdded" xml:space="preserve">
+    <value>Produkt został dodany!</value>
+  </data>
+  <data name="StringThisDeviceAlreadyExists" xml:space="preserve">
+    <value>Dane tego urządzenia istnieją już w naszym systemie i nie mogą być ponownie doliczone do Twojego konta.</value>
+  </data>
+  <data name="StringTurnoveInAKU" xml:space="preserve">
+    <value>Obrót w AKU</value>
+  </data>
+  <data name="StringTurnoverThresholdToBeReached" xml:space="preserve">
+    <value>Próg obrotu do osiągnięcia</value>
+  </data>
+  <data name="StringYourMetaboCoins" xml:space="preserve">
+    <value>Twoje metaboCoins</value>
+  </data>
+  <data name="StringYourTurnover" xml:space="preserve">
+    <value>Twój obrót</value>
+  </data>
+</root>

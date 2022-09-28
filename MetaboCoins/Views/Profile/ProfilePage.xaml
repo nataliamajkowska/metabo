@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetaboCoins.Views.Profile.ProfilePage"
+             xmlns:baseTemplates="clr-namespace:MetaboCoins.Views.Base.Templates"
+             xmlns:resx="clr-namespace:MetaboCoins.Resx"
+             NavigationPage.HasNavigationBar="False">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ScrollView
+            Grid.Row="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <!-- Background-->
+                <Grid
+                    Grid.Row="0"
+                    BackgroundColor="{DynamicResource DirtyWhiteBackgroundColor}">
+                    <Frame
+                        Grid.Row="0"
+                        Margin="0,280,0,-20"
+                        Padding="0"
+                        BorderColor="{DynamicResource FullTransparentBackgroundColor}"
+                        BackgroundColor="{DynamicResource WhiteBackgroundColor}"
+                        IsClippedToBounds="True"
+                        CornerRadius="20"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"/>
+                </Grid>
+                <Grid
+                    Grid.Row="0"
+                    Padding="30,0,30,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <!-- Profile Label-->
+                    <Label 
+                        Grid.Row="0"
+                        Padding="0,20,0,30"
+                        Text="{x:Static resx:AppResources.StringProfile}"
+                        FontSize="24"
+                        TextColor="{DynamicResource BaseTextColor}"
+                        Style="{StaticResource LabelBoldStyle}"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Start"/>
+                    <!-- Name Label-->
+                    <Label 
+                        Grid.Row="1"
+                        Padding="0,0,0,30"
+                        Text="{Binding UserName}"
+                        FontSize="34"
+                        TextColor="{DynamicResource DarkShadowTextColor}"
+                        Style="{StaticResource LabelBoldStyle}"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Start"/>
+                    <!-- User Information -->
+                    <Frame
+                        Grid.Row="2"
+                        Margin="0,0,0,20"
+                        Padding="0"
+                        BorderColor="{DynamicResource FullTransparentBackgroundColor}"
+                        BackgroundColor="{DynamicResource WhiteBackgroundColor}"
+                        IsClippedToBounds="True"
+                        CornerRadius="20"
+                        HeightRequest="220"
+                        HorizontalOptions="FillAndExpand">
+                        <Grid
+                            Padding="20"
+                            RowSpacing="20">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="40"/>
+                            </Grid.RowDefinitions>
+                            <!-- Phone Number-->
+                            <Frame
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Padding="0"
+                                BorderColor="{DynamicResource FullTransparentBackgroundColor}"
+                                BackgroundColor="{DynamicResource ShadowBackgoundColor}"
+                                IsClippedToBounds="True"
+                                CornerRadius="10"
+                                HeightRequest="40"
+                                WidthRequest="40">
+                                <Image
+                                    HeightRequest="18"
+                                    WidthRequest="18"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    Source="phone.png"/>
+                            </Frame>
+                            <StackLayout
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Padding="13,0,0,0">
+                                <Label
+                                    Text="{x:Static resx:AppResources.StringPhoneNumber}"
+                                    FontSize="14"
+                                    TextColor="{DynamicResource BaseTextColor}"
+                                    Style="{StaticResource LabelBoldStyle}"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="Start"/>
+                                <Label
+                                    Text="{Binding PhoneNumber, StringFormat='+48 {0}'}"
+                                    FontSize="14"
+                                    TextColor="{DynamicResource DarkShadowTextColor}"
+                                    Style="{StaticResource LabelBoldStyle}"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="Start"/>
+                            </StackLayout>
+                            <!-- Email-->
+                            <Frame
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Padding="0"
+                                BorderColor="{DynamicResource FullTransparentBackgroundColor}"
+                                BackgroundColor="{DynamicResource ShadowBackgoundColor}"
+                                IsClippedToBounds="True"
+                                CornerRadius="10"
+                                HeightRequest="40"
+                                WidthRequest="40">
+                                <Image
+                                    HeightRequest="20"
+                                    WidthRequest="20"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    Source="email.png"/>
+                            </Frame>
+                            <StackLayout
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                Padding="13,0,0,0">
+                                <Label
+                                    Text="{x:Static resx:AppResources.StringEmailAdress}"
+                                    FontSize="14"
+                                    TextColor="{DynamicResource BaseTextColor}"
+                                    Style="{StaticResource LabelBoldStyle}"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="Start"/>
+                                <Label
+                                    Text="{Binding Email}"
+                                    FontSize="14"
+                                    TextColor="{DynamicResource DarkShadowTextColor}"
+                                    Style="{StaticResource LabelBoldStyle}"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="Start"/>
+                            </StackLayout>
+                            <!-- Store name-->
+                            <Frame
+                                Grid.Row="2"
+                                Grid.Column="0"
+                                Padding="0"
+                                BorderColor="{DynamicResource FullTransparentBackgroundColor}"
+                                BackgroundColor="{DynamicResource ShadowBackgoundColor}"
+                                IsClippedToBounds="True"
+                                CornerRadius="10"
+                                HeightRequest="40"
+                                WidthRequest="40">
+                                <Image
+                                    HeightRequest="18"
+                                    WidthRequest="20"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    Source="domain.png"/>
+                            </Frame>
+                            <StackLayout
+                                Grid.Row="2"
+                                Grid.Column="1"
+                                Padding="13,0,0,0">
+                                <Label
+                                    Text="{x:Static resx:AppResources.StringCompanyName}"
+                                    FontSize="14"
+                                    TextColor="{DynamicResource BaseTextColor}"
+                                    Style="{StaticResource LabelBoldStyle}"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="Start"/>
+                                <Label
+                                    Text="{Binding StoreName}"
+                                    FontSize="14"
+                                    TextColor="{DynamicResource DarkShadowTextColor}"
+                                    Style="{StaticResource LabelBoldStyle}"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="Start"/>
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
+                    <baseTemplates:MainInformation
+                        Grid.Row="3"/>
+                    <!-- History Button -->
+                    <Frame
+                        Grid.Row="4"
+                        Margin="0,5,0,10"
+                        Padding="0"
+                        BorderColor="{DynamicResource FullTransparentBackgroundColor}"
+                        BackgroundColor="{DynamicResource DarkShadowBackgoundColor}"
+                        IsClippedToBounds="True"
+                        CornerRadius="20"
+                        HeightRequest="80"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="End">
+                        <Grid
+                            Padding="15">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
+                            <Frame
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Padding="0"
+                                BorderColor="{DynamicResource FullTransparentBackgroundColor}"
+                                BackgroundColor="{DynamicResource DarkBackgroundColor}"
+                                IsClippedToBounds="True"
+                                CornerRadius="10"
+                                HeightRequest="50"
+                                WidthRequest="50">
+                                <Image
+                                    HeightRequest="24"
+                                    WidthRequest="24"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    Source="historyWhite.png"/>
+                            </Frame>
+                            <StackLayout
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Padding="13,0,0,0"
+                                Orientation="Horizontal">
+                                <Label
+                                    Text="{x:Static resx:AppResources.StringHistory}"
+                                    FontSize="18"
+                                    TextColor="{DynamicResource WhiteTextColor}"
+                                    Style="{StaticResource LabelBoldStyle}"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="Center"/>
+                                <Image
+                                    Margin="0,0,20,0"
+                                    HeightRequest="12"
+                                    WidthRequest="7"
+                                    HorizontalOptions="End"
+                                    VerticalOptions="Center"
+                                    Source="arrowRight.png"/>
+                            </StackLayout>
+                        </Grid>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding GoHistoryCommand}"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </Grid>
+            </Grid>
+        </ScrollView>
+        <!-- Bottom Navigation-->
+        <baseTemplates:BottomNavigationBar Grid.Row="1"/>
+    </Grid>
+</ContentPage>

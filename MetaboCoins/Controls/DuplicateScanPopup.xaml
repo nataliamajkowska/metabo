@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pages:PopupPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" 
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+    xmlns:resx="clr-namespace:MetaboCoins.Resx"
+	x:Class="MetaboCoins.DuplicateScanPopup"
+	BackgroundColor="{DynamicResource MediumTransparentBackgroundColor}"
+    CloseWhenBackgroundIsClicked="True"
+	x:Name="Root">
+
+    <pages:PopupPage.Animation>
+        <animations:MoveAnimation
+			PositionIn="Top"
+			PositionOut="Top" />
+    </pages:PopupPage.Animation>
+
+    <Grid
+		Margin="25"
+        VerticalOptions="Start"
+        HorizontalOptions="FillAndExpand"
+        HeightRequest="225">
+        <Frame
+            Padding="0"
+            IsClippedToBounds="True"
+            CornerRadius="20"
+            VerticalOptions="Center"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="{DynamicResource WhiteBackgroundColor}"
+            HeightRequest="225">
+            <Grid
+                Margin="20"
+			    RowSpacing="0"
+			    ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <!-- Alert Icon -->
+                <Image
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    HeightRequest="65"
+                    WidthRequest="65"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Start"
+                    Source="alert.png"/>
+                <!-- Alert Info -->
+                <StackLayout
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    VerticalOptions="Center">
+                    <Label
+                        VerticalOptions="Center"
+                        HorizontalOptions="Start"
+                        Text="{x:Static resx:AppResources.StringScanFailureDuplicate}"
+                        FontSize="13"
+                        TextColor="{DynamicResource RedTextColor}"
+                        Style="{StaticResource LabelBoldStyle}"/>
+                    <Label
+                        VerticalOptions="Center"
+                        HorizontalOptions="Start"
+                        Text="{x:Static resx:AppResources.StringThisDeviceAlreadyExists}"
+                        FontSize="12"
+                        TextColor="{DynamicResource ShadowTextColor}"
+                        Style="{StaticResource LabelBoldStyle}"/>
+                </StackLayout>
+                <!-- Close button -->
+                <Frame
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    Padding="0"
+                    BorderColor="{DynamicResource FullTransparentBackgroundColor}"
+                    BackgroundColor="{DynamicResource DarkBackgroundColor}"
+                    IsClippedToBounds="True"
+                    CornerRadius="20"
+                    HeightRequest="40"
+                    WidthRequest="110"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End">
+                    <Label
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="12"
+                        Text="{x:Static resx:AppResources.StringClose}"
+                        TextColor="{DynamicResource WhiteTextColor}"
+                        Style="{StaticResource LabelBoldStyle}"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnClose"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+        </Frame>
+        
+    </Grid>
+
+</pages:PopupPage>

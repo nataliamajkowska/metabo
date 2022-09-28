@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetaboCoins.Views.Base.Templates.BottomNavigationBar"
+             BackgroundColor="{ DynamicResource BottomNavigationBarBackgoundColor }">
+    <ContentView.Content>
+        <Grid
+            Margin="0,-6,0,0"
+            BackgroundColor="{ DynamicResource BottomNavigationBarBackgoundColor }">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="55"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid
+                x:Name="grid"
+                Grid.Row="0"
+                Padding="15,5,15,5"
+                ColumnSpacing="9"
+                HeightRequest="50">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!-- Main Bar-->
+                <Grid 
+                    x:Name="MainBar"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    VerticalOptions="Center"
+                    HeightRequest="50">
+                    <Image
+                        Source="home.png" 
+                        HeightRequest="20"
+                        WidthRequest="26"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"/>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Main_Tapped"/>
+                    </Grid.GestureRecognizers>
+                </Grid>
+                <!-- Profil Bar-->
+                <Grid 
+                    x:Name="ProfilBar"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    VerticalOptions="Center"
+                    HeightRequest="50">
+                    <Image
+                        Source="account.png" 
+                        HeightRequest="20"
+                        WidthRequest="20"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"/>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Profil_Tapped"/>
+                    </Grid.GestureRecognizers>
+                </Grid>
+                <!-- QrcodeScan Bar-->
+                <Grid 
+                    x:Name="QrcodeScanBar"
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    VerticalOptions="Center"
+                    HeightRequest="50">
+                    <Frame
+                        Padding="0"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        BorderColor="{DynamicResource FullTransparentBackgroundColor}"
+                        BackgroundColor="{DynamicResource QrcodeScanBackgoundColor}"
+                        IsClippedToBounds="True"
+                        CornerRadius="14">
+                        <Image
+                            Source="qrcodeScan.png" 
+                            HeightRequest="30"
+                            WidthRequest="30"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"/>
+                    </Frame>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="QrcodeScan_Tapped"/>
+                    </Grid.GestureRecognizers>
+                </Grid>
+                <!-- History Bar-->
+                <Grid 
+                    x:Name="HistoryBar"
+                    Grid.Row="0"
+                    Grid.Column="3"
+                    VerticalOptions="Center"
+                    HeightRequest="50">
+                    <Image
+                        Source="history.png" 
+                        HeightRequest="22"
+                        WidthRequest="22"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"/>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="History_Tapped"/>
+                    </Grid.GestureRecognizers>
+                </Grid>
+                <!-- Cart Bar-->
+                <Grid 
+                    x:Name="CartBar"
+                    Grid.Row="0"
+                    Grid.Column="4"
+                    VerticalOptions="Center"
+                    HeightRequest="50">
+                    <Image
+                        Source="cart.png" 
+                        HeightRequest="24"
+                        WidthRequest="24"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"/>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Cart_Tapped"/>
+                    </Grid.GestureRecognizers>
+                </Grid>
+            </Grid>
+            <!-- Empty Place on IOS -->
+            <BoxView
+                    Grid.Row="1"
+                    VerticalOptions="Center"
+                    HorizontalOptions="FillAndExpand"
+                    HeightRequest="10"
+                    BackgroundColor="{DynamicResource BottomNavigationBarBackgoundColor}">
+                <BoxView.IsVisible>
+                    <OnPlatform x:TypeArguments="x:Boolean"
+                      iOS="true"
+                      Android="false"/>
+                </BoxView.IsVisible>
+            </BoxView>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

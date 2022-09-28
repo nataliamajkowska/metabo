@@ -1,0 +1,30 @@
+﻿<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MetaboCoins.MyAppTheme">
+    <!-- Background Color -->
+    <Color x:Key="LoginBackgroundColor">#F9F9F9</Color>
+    <Color x:Key="MainBackgroundColor">#F9F9F9</Color>
+    <Color x:Key="FullTransparentBackgroundColor">#00000000</Color>
+    <Color x:Key="MediumTransparentBackgroundColor">#AA000000</Color>
+    <Color x:Key="LittleTransparentBackgroundColor">#20000000</Color>
+    <Color x:Key="DarkBackgroundColor">#707070</Color>
+    <Color x:Key="WhiteBackgroundColor">#FFFFFF</Color>
+    <Color x:Key="ShadowBackgroundColor">#EAEAEA</Color>
+    <Color x:Key="BottomNavigationBarBackgoundColor">#F2F2F2</Color>
+    <Color x:Key="QrcodeScanBackgoundColor">#DDDDDD</Color>
+    <Color x:Key="ShadowBackgoundColor">#DDDDDD</Color>
+    <Color x:Key="DarkShadowBackgoundColor">#848484</Color>
+    <Color x:Key="GreenBackgroundColor">#1DB71D</Color>
+    <Color x:Key="RedBackgroundColor">#E52D2D</Color>
+    <Color x:Key="DirtyWhiteBackgroundColor">#F4F4FB</Color>
+
+    <!-- Text Color -->
+    <Color x:Key="BaseTextColor">#3B3B3B</Color>
+    <Color x:Key="WhiteTextColor">#FCFCFC</Color>
+    <Color x:Key="DarkShadowTextColor">#969696</Color>
+    <Color x:Key="ShadowTextColor">#C4C4C4</Color>
+    <Color x:Key="RedTextColor">#E52D2D</Color>
+    <Color x:Key="GreenTextColor">#1DB71D</Color>
+    <!-- Other Color -->
+    <Color x:Key="EntryFrameColor">#C4C4C4</Color>
+    <Color x:Key="LoadingColor">#F9F9F9</Color>
+   
+</ResourceDictionary>
