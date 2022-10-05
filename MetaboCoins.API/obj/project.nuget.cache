@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mpklwZisIKf7O8mO55Q3OdjPWTJaPWE2HX4ceG3GD6f0h/N+mYs+x7N3gbfFgumtLEJ14sq5JeNALpOcwks4lw==",
+  "dgSpecHash": "rWTyxuWXIOaYfskRTO7rXTy2HD867fo4gnxjRQj8aK40k19qVPwIRc6hutCqw+CROQc5xRp4JIHoHGYr8qzWrA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\WIN10\\Desktop\\metabofilm2layout\\metabo-app-main\\MetaboCoins.API\\MetaboCoins.API.csproj",
+  "projectFilePath": "C:\\Users\\WIN10\\Desktop\\Engineering\\metabofilm2layout\\metabo-app-main\\MetaboCoins.API\\MetaboCoins.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WIN10\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\WIN10\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.8\\microsoft.aspnetcore.authentication.jwtbearer.6.0.8.nupkg.sha512",

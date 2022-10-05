@@ -5,7 +5,7 @@
              xmlns:resx="clr-namespace:MetaboCoins.Resx"
              xmlns:converter="clr-namespace:MetaboCoins.ViewModels.Base">
   <ContentView.Content>
-      <Grid>
+        <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -385,6 +385,23 @@
                     </Grid>
                 </Frame>
             </Grid>
+            <Grid
+            Grid.Row="0"
+            IsVisible="{Binding IsBusy}"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="{DynamicResource MediumTransparentBackgroundColor}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <ActivityIndicator 
+                Grid.Row="0"
+                Color="{DynamicResource LoadingColor}"
+                IsRunning="{Binding IsBusy}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                InputTransparent="True"/>
+            </Grid>
         </Grid>
-  </ContentView.Content>
+    </ContentView.Content>
 </ContentView>

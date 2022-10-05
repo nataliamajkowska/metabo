@@ -13,7 +13,7 @@
 namespace MetaboCoins.Views.Base.Templates {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views/Base/Templates/MainInformation.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\Base\\Templates\\MainInformation.xaml")]
     public partial class MainInformation : global::Xamarin.Forms.ContentView {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

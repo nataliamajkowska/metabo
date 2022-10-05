@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YawKy6vGnxDOgUBFO+km7t3UTV+Tk8UGbnj3rfX+lYqe6vlElfzg/mf+elAFlXSxI+3VN5zJ8wL2yloi4om05A==",
+  "dgSpecHash": "gVXMvziDu5Ilt4mBxU5rjhx+RcOO2zQj3R2Le+S5CRbJPDEPv3pPm2DuSuXDYqT8HzRJtLYxevGgDl/uNKiAPQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\WIN10\\Desktop\\metabofilm2layout\\metabo-app-main\\MetaboCoins\\MetaboCoins.csproj",
+  "projectFilePath": "C:\\Users\\WIN10\\Desktop\\Engineering\\metabofilm2layout\\metabo-app-main\\MetaboCoins\\MetaboCoins.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WIN10\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\WIN10\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

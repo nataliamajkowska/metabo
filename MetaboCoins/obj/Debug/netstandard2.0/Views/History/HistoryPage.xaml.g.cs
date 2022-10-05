@@ -13,7 +13,7 @@
 namespace MetaboCoins.Views.History {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views/History/HistoryPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\History\\HistoryPage.xaml")]
     public partial class HistoryPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

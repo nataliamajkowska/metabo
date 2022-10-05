@@ -13,7 +13,7 @@
 namespace MetaboCoins {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Controls/FailedScanPopup.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Controls\\FailedScanPopup.xaml")]
     public partial class FailedScanPopup : global::Rg.Plugins.Popup.Pages.PopupPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

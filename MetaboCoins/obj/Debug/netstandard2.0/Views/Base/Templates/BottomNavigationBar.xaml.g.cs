@@ -13,7 +13,7 @@
 namespace MetaboCoins.Views.Base.Templates {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views/Base/Templates/BottomNavigationBar.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\Base\\Templates\\BottomNavigationBar.xaml")]
     public partial class BottomNavigationBar : global::Xamarin.Forms.ContentView {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

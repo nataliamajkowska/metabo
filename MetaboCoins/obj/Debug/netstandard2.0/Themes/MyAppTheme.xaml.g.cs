@@ -13,7 +13,7 @@
 namespace MetaboCoins {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Themes/MyAppTheme.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Themes\\MyAppTheme.xaml")]
     public partial class MyAppTheme : global::Xamarin.Forms.ResourceDictionary {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

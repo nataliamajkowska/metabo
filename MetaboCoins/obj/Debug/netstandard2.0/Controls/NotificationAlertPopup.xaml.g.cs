@@ -13,7 +13,7 @@
 namespace MetaboCoins {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Controls/NotificationAlertPopup.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Controls\\NotificationAlertPopup.xaml")]
     public partial class NotificationAlertPopup : global::Rg.Plugins.Popup.Pages.PopupPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

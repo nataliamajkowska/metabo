@@ -62,5 +62,22 @@
         </Grid>
         <!-- Bottom Navigation-->
         <baseTemplates:BottomNavigationBar Grid.Row="1"/>
+        <Grid
+            Grid.Row="0"
+            IsVisible="{Binding IsBusy}"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="{DynamicResource MediumTransparentBackgroundColor}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ActivityIndicator 
+                Grid.Row="0"
+                Color="{DynamicResource LoadingColor}"
+                IsRunning="{Binding IsBusy}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                InputTransparent="True"/>
+        </Grid>
     </Grid>
 </ContentPage>

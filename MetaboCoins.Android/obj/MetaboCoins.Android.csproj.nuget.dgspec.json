@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\WIN10\\Desktop\\metabofilm2layout\\metabo-app-main\\MetaboCoins.Android\\MetaboCoins.Android.csproj": {}
+    "C:\\Users\\WIN10\\Desktop\\Engineering\\metabofilm2layout\\metabo-app-main\\MetaboCoins.Android\\MetaboCoins.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\WIN10\\Desktop\\metabofilm2layout\\metabo-app-main\\MetaboCoins.Android\\MetaboCoins.Android.csproj": {
+    "C:\\Users\\WIN10\\Desktop\\Engineering\\metabofilm2layout\\metabo-app-main\\MetaboCoins.Android\\MetaboCoins.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\WIN10\\Desktop\\metabofilm2layout\\metabo-app-main\\MetaboCoins.Android\\MetaboCoins.Android.csproj",
+        "projectUniqueName": "C:\\Users\\WIN10\\Desktop\\Engineering\\metabofilm2layout\\metabo-app-main\\MetaboCoins.Android\\MetaboCoins.Android.csproj",
         "projectName": "MetaboCoins.Android",
-        "projectPath": "C:\\Users\\WIN10\\Desktop\\metabofilm2layout\\metabo-app-main\\MetaboCoins.Android\\MetaboCoins.Android.csproj",
+        "projectPath": "C:\\Users\\WIN10\\Desktop\\Engineering\\metabofilm2layout\\metabo-app-main\\MetaboCoins.Android\\MetaboCoins.Android.csproj",
         "packagesPath": "C:\\Users\\WIN10\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\WIN10\\Desktop\\metabofilm2layout\\metabo-app-main\\MetaboCoins.Android\\obj\\",
+        "outputPath": "C:\\Users\\WIN10\\Desktop\\Engineering\\metabofilm2layout\\metabo-app-main\\MetaboCoins.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid12.0": {
             "projectReferences": {
-              "C:\\Users\\WIN10\\Desktop\\metabofilm2layout\\metabo-app-main\\MetaboCoins\\MetaboCoins.csproj": {
-                "projectPath": "C:\\Users\\WIN10\\Desktop\\metabofilm2layout\\metabo-app-main\\MetaboCoins\\MetaboCoins.csproj"
+              "C:\\Users\\WIN10\\Desktop\\Engineering\\metabofilm2layout\\metabo-app-main\\MetaboCoins\\MetaboCoins.csproj": {
+                "projectPath": "C:\\Users\\WIN10\\Desktop\\Engineering\\metabofilm2layout\\metabo-app-main\\MetaboCoins\\MetaboCoins.csproj"
               }
             }
           }
@@ -74,14 +74,14 @@
         }
       }
     },
-    "C:\\Users\\WIN10\\Desktop\\metabofilm2layout\\metabo-app-main\\MetaboCoins\\MetaboCoins.csproj": {
+    "C:\\Users\\WIN10\\Desktop\\Engineering\\metabofilm2layout\\metabo-app-main\\MetaboCoins\\MetaboCoins.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\WIN10\\Desktop\\metabofilm2layout\\metabo-app-main\\MetaboCoins\\MetaboCoins.csproj",
+        "projectUniqueName": "C:\\Users\\WIN10\\Desktop\\Engineering\\metabofilm2layout\\metabo-app-main\\MetaboCoins\\MetaboCoins.csproj",
         "projectName": "MetaboCoins",
-        "projectPath": "C:\\Users\\WIN10\\Desktop\\metabofilm2layout\\metabo-app-main\\MetaboCoins\\MetaboCoins.csproj",
+        "projectPath": "C:\\Users\\WIN10\\Desktop\\Engineering\\metabofilm2layout\\metabo-app-main\\MetaboCoins\\MetaboCoins.csproj",
         "packagesPath": "C:\\Users\\WIN10\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\WIN10\\Desktop\\metabofilm2layout\\metabo-app-main\\MetaboCoins\\obj\\",
+        "outputPath": "C:\\Users\\WIN10\\Desktop\\Engineering\\metabofilm2layout\\metabo-app-main\\MetaboCoins\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

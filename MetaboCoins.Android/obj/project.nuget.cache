@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "A9wQrykV9j91I0FS2r6GvvUpCxjAQ4DUIWTARo5hMb9r6P2KYN/OtrPhO3O1/owhNbjH2L/xLQbFQVHoaUSlBg==",
+  "dgSpecHash": "2k3QtOZq8bk5mnuhSA6h2IjGcIl3XKrEQxRT1k2BhNzWdpRsK4y1Aixtv+XLojt7NZDQMpfjrlxnO4HGL0qmNw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\WIN10\\Desktop\\metabofilm2layout\\metabo-app-main\\MetaboCoins.Android\\MetaboCoins.Android.csproj",
+  "projectFilePath": "C:\\Users\\WIN10\\Desktop\\Engineering\\metabofilm2layout\\metabo-app-main\\MetaboCoins.Android\\MetaboCoins.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WIN10\\.nuget\\packages\\com.airbnb.android.lottie\\4.2.2\\com.airbnb.android.lottie.4.2.2.nupkg.sha512",
     "C:\\Users\\WIN10\\.nuget\\packages\\com.airbnb.xamarin.forms.lottie\\4.1.0\\com.airbnb.xamarin.forms.lottie.4.1.0.nupkg.sha512",

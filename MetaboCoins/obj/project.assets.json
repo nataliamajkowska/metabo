@@ -896,11 +896,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\WIN10\\Desktop\\metabofilm2layout\\metabo-app-main\\MetaboCoins\\MetaboCoins.csproj",
+      "projectUniqueName": "C:\\Users\\WIN10\\Desktop\\Engineering\\metabofilm2layout\\metabo-app-main\\MetaboCoins\\MetaboCoins.csproj",
       "projectName": "MetaboCoins",
-      "projectPath": "C:\\Users\\WIN10\\Desktop\\metabofilm2layout\\metabo-app-main\\MetaboCoins\\MetaboCoins.csproj",
+      "projectPath": "C:\\Users\\WIN10\\Desktop\\Engineering\\metabofilm2layout\\metabo-app-main\\MetaboCoins\\MetaboCoins.csproj",
       "packagesPath": "C:\\Users\\WIN10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\WIN10\\Desktop\\metabofilm2layout\\metabo-app-main\\MetaboCoins\\obj\\",
+      "outputPath": "C:\\Users\\WIN10\\Desktop\\Engineering\\metabofilm2layout\\metabo-app-main\\MetaboCoins\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

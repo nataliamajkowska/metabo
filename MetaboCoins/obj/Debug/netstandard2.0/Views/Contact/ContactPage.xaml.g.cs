@@ -13,7 +13,7 @@
 namespace MetaboCoins.Views.Contact {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views/Contact/ContactPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\Contact\\ContactPage.xaml")]
     public partial class ContactPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
